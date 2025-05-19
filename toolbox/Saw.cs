@@ -12,7 +12,7 @@ namespace toolbox
     {
         private string _name;
         private int _weight;
-        private string _toolCategory;
+        protected string _toolCategory;
         public Saw(string name, int weight, string toolCategory) : base(name, weight, toolCategory)
         {
             _name = name;
@@ -27,6 +27,10 @@ namespace toolbox
         public override void Use()
         {
             Console.WriteLine("Saw is being used");
+        }
+        public override string returnCategory()
+        {
+            return _toolCategory;
         }
     }
 }

@@ -35,6 +35,14 @@ namespace toolbox
             }
         }
 
+        public void PrintCountOfUse()
+        {
+            foreach (Tool tool in _tools)
+            {
+                Console.WriteLine($"the count useid of {tool.ReturnName()} is {tool.ReturnCount()}");
+            }
+        }
+
 
     }
 }

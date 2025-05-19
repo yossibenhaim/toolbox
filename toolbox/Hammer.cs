@@ -12,6 +12,8 @@ namespace toolbox
         private string _name;
         private int _weight;
         protected string _toolCategory;
+        private int _counter;
+
         public Hammer(string name, int weight, string toolCategory) : base(name, weight, toolCategory)
         {
             _name = name;
@@ -25,11 +27,24 @@ namespace toolbox
         }
         public override void Use()
         {
+            counting();
             Console.WriteLine("Hammer is being used");
         }
         public override string returnCategory()
         {
             return _toolCategory;
+        }
+        public override void counting()
+        {
+            _counter++;
+        }
+        public override int ReturnCount()
+        {
+            return _counter;
+        }
+        public override string ReturnName()
+        {
+            return _name;
         }
     }
 }

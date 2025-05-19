@@ -27,6 +27,7 @@ namespace toolbox
         }
         public override void Use()
         {
+            counting();
             Console.WriteLine("WireStripper is being used");
         }
 
@@ -38,5 +39,14 @@ namespace toolbox
         {
             _counter++;
         }
+        public override int ReturnCount()
+        {
+            return _counter;
+        }
+        public override string ReturnName()
+        {
+            return _name;
+        }
     }
 }
+

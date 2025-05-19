@@ -26,6 +26,7 @@ namespace toolbox
         }
         public override void Use()
         {
+            counting();
             Console.WriteLine("PipeCutter is being used");
         }
         public override string returnCategory()
@@ -35,6 +36,14 @@ namespace toolbox
         public override void counting()
         {
             _counter++;
+        }
+        public override int ReturnCount()
+        {
+            return _counter;
+        }
+        public override string ReturnName()
+        {
+            return _name;
         }
     }
 }

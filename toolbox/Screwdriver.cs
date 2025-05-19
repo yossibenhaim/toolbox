@@ -37,5 +37,13 @@ namespace toolbox
         {
             _counter++;
         }
+        public override int ReturnCount()
+        {
+            return _counter;
+        }
+        public override string ReturnName()
+        {
+            return _name;
+        }
     }
 }

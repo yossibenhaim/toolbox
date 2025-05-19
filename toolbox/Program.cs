@@ -22,14 +22,19 @@ namespace toolbox
             NailGun nailgun = new NailGun("nailgun", 1, "Fastening Tools");
             List<Tool> myTools = new List<Tool> { hammer, wrench, drill, saw, screwdriver, pipecutter, wirestripper, nailgun };
 
+
                        
             foreach (Tool tool in myTools)
             {
                 toolBox.AddTool(tool);
             }
 
+
+            pipecutter.Use();
+
             toolBox.PrintToolInformation();
             toolBox.PrintAllTools();
+            toolBox.PrintCountOfUse();
         }
     }
 }

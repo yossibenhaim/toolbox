@@ -15,5 +15,11 @@ namespace toolbox
         public abstract void Use();
 
         public abstract string returnCategory();
+
+        public abstract void counting();
+
+        public abstract int ReturnCount();
+
+        public abstract string ReturnName();
     }
 }

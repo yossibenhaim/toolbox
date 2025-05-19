@@ -8,14 +8,11 @@ namespace toolbox
 {
     public abstract class Tool
     {
-        public Tool(string name, int weight) { }
+        protected Tool(string name, int weight, string toolCategory) { }
 
         public abstract void Describe();
 
-        public virtual void Use()
-        {
-            Console.WriteLine("Tool is being used");
-        }
+        public abstract void Use();
 
     }
 }

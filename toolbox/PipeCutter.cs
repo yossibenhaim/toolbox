@@ -11,7 +11,8 @@ namespace toolbox
     {
         private string _name;
         private int _weight;
-        public PipeCutter(string name, int weight) : base(name, weight)
+        private string _toolCategory;
+        public PipeCutter(string name, int weight, string toolCategory) : base(name, weight, toolCategory)
         {
             _name = name;
             _weight = weight;
@@ -19,7 +20,7 @@ namespace toolbox
 
         public override void Describe()
         {
-            Console.WriteLine("Your tool is the PipeCutter.");
+            Console.WriteLine($"Tool: {_name}, Weight: {_weight}kg, Category: {_toolCategory}");
         }
         public override void Use()
         {

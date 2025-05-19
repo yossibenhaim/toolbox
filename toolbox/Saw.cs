@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace toolbox
 {
@@ -11,15 +12,17 @@ namespace toolbox
     {
         private string _name;
         private int _weight;
-        public Saw(string name, int weight) : base(name, weight)
+        private string _toolCategory;
+        public Saw(string name, int weight, string toolCategory) : base(name, weight, toolCategory)
         {
             _name = name;
             _weight = weight;
+            _toolCategory = toolCategory;
         }
 
         public override void Describe()
         {
-            Console.WriteLine("Your tool is the Saw.");
+            Console.WriteLine($"Tool: {_name}, Weight: {_weight}kg, Category: {_toolCategory}");
         }
         public override void Use()
         {

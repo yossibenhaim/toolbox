@@ -12,6 +12,8 @@ namespace toolbox
         private string _name;
         private int _weight;
         protected string _toolCategory;
+        private int _counter;
+
         public Wrench(string name, int weight, string toolCategory) : base(name, weight, toolCategory)
         {
             _name = name;
@@ -32,6 +34,10 @@ namespace toolbox
         public override string returnCategory()
         {
             return _toolCategory;
+        }
+        public override void counting()
+        {
+            _counter++;
         }
     }
 }

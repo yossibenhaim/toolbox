@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace toolbox
 {
-    internal class Tool
+    public abstract class Tool
     {
+        public Tool(string name, int weight) { }
+
+        public abstract void Describe();
+
+        public virtual void Use()
+        {
+            Console.WriteLine("Tool is being used");
+        }
+
     }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace toolbox
 {
-    internal class Wrench : Tool
+    internal class WireStripper : Tool
     {
         private string _name;
         private int _weight;
-        public Wrench(string name, int weight) : base(name, weight)
+        public WireStripper(string name, int weight) : base(name, weight)
         {
             _name = name;
             _weight = weight;
@@ -19,11 +19,11 @@ namespace toolbox
 
         public override void Describe()
         {
-            Console.WriteLine("Your tool is the Wrench.");
+            Console.WriteLine("Your tool is the WireStripper.");
         }
         public override void Use()
         {
-            Console.WriteLine("Wrench is being used");
+            Console.WriteLine("WireStripper is being used");
         }
     }
 }

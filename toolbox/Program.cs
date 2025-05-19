@@ -20,7 +20,9 @@ namespace toolbox
             PipeCutter pipecutter = new PipeCutter("pipecutter",8, "Cutting Tools");
             WireStripper wirestripper = new WireStripper("wirestripper", 7, "Electrical Tools");
             NailGun nailgun = new NailGun("nailgun", 1, "Fastening Tools");
-            Tool[] myTools = { hammer, wrench, drill, saw, screwdriver, pipecutter, wirestripper, nailgun };
+            List<Tool> myTools = new List<Tool> { hammer, wrench, drill, saw, screwdriver, pipecutter, wirestripper, nailgun };
+
+                       
             foreach (Tool tool in myTools)
             {
                 toolBox.AddTool(tool);

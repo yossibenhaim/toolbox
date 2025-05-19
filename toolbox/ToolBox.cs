@@ -18,7 +18,8 @@ namespace toolbox
 
         public void PrintAllTools()
         {
-            var counts = _tools.GroupBy(item => item); 
+            var counts = _tools.GroupBy(item => item.returnCategory()); 
+
             foreach (var group in counts)
             {
                 Console.WriteLine($"{group.Key} appears {group.Count()} times");

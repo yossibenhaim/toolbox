@@ -14,5 +14,6 @@ namespace toolbox
 
         public abstract void Use();
 
+        public abstract string returnCategory();
     }
 }

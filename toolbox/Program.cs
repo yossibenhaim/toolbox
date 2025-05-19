@@ -10,20 +10,24 @@ namespace toolbox
     {
         static void Main(string[] args)
         {
-            Hammer hammer = new Hammer("hammer",4);
-            Wrench wrench = new Wrench("wrench",3);
-            Drill drill = new Drill("drill",6);
-            Saw saw = new Saw("saw",7);
-            Screwdriver screwdriver = new Screwdriver("screwdriver",10);
-            PipeCutter pipecutter = new PipeCutter("pipecutter",8);
-            WireStripper wirestripper = new WireStripper("wirestripper", 7);
-            NailGun nailgun = new NailGun("nailgun", 1);
+            ToolBox toolBox = new ToolBox();
+
+            Hammer hammer = new Hammer("hammer",4, "Fastening Tools");
+            Wrench wrench = new Wrench("wrench",3, "Wrenching Tools");
+            Drill drill = new Drill("drill",6, "Drilling Tools");
+            Saw saw = new Saw("saw",7, "Cutting Tools");
+            Screwdriver screwdriver = new Screwdriver("screwdriver",10, "Fastening Tools");
+            PipeCutter pipecutter = new PipeCutter("pipecutter",8, "Cutting Tools");
+            WireStripper wirestripper = new WireStripper("wirestripper", 7, "Electrical Tools");
+            NailGun nailgun = new NailGun("nailgun", 1, "Fastening Tools");
             Tool[] myTools = { hammer, wrench, drill, saw, screwdriver, pipecutter, wirestripper, nailgun };
             foreach (Tool tool in myTools)
             {
-                tool.Describe();
-                tool.Use();
+                toolBox.AddTool(tool);
             }
+
+            toolBox.PrintToolInformation();
+            toolBox.PrintAllTools();
         }
     }
 }
